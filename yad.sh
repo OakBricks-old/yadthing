@@ -23,8 +23,6 @@ case $action in
     Logout*) 
     case $(wmctrl -m | grep Name) in
         *Openbox) cmd="openbox --exit" ;;
-        *FVWM) cmd="FvwmCommand Quit" ;;
-            *Metacity) cmd="gnome-save-session --kill" ;; 
         *) exit 1 ;;
     esac
     ;;
